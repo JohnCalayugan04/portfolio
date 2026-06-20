@@ -50,3 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function startDemo() {
+        const overlay = document.getElementById('demoOverlay');
+        const video = document.getElementById('biomassVideo');
+        
+        // Hide the button overlay
+        overlay.style.display = 'none';
+        
+        // Start playing the video automatically
+        video.play();
+    }

@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Calayugan | Portfolio</title>
     
+    <link rel="icon" type="image/png" href="images/web_logo.jpeg">
     <link rel="stylesheet" href="CSS/style.css">
-    
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
     <nav>
-        <a href="#home" class="logo">John Calayugan</a>
+        <a href="#home" class="logo">
+            <img src="images/web_logo.jpeg" alt="Logo" class="logo-img">
+        </a>
         <button class="hamburger" id="hamburger">
             <i class="fas fa-bars"></i>
         </button>
@@ -37,7 +39,10 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p> I am a Computer Engineering graduate who uses strong systems logic to build high-performance web applications. My core focus is full-stack web development, specializing in creating clean, responsive front-ends and managing seamless back-end data flow. I excel at writing efficient JavaScript and C++ code to solve complex programming logic and build data-driven web features. Moving forward, I want to jumpstart my career as a Software Engineer and Full-Stack Developer where I can build and deploy scalable real-world web solutions.</p>
+        <p> I am a Computer Engineering graduate who uses strong systems logic to build high-performance web applications. 
+            My core focus is full-stack web development, specializing in creating clean, responsive front-ends and managing seamless back-end data flow. 
+            I excel at writing efficient JavaScript and C++ code to solve complex programming logic and build data-driven web features. 
+            Moving forward, I want to jumpstart my career as a Software Engineer and Full-Stack Developer where I can build and deploy scalable real-world web solutions.</p>
 
         <div class="skills-section">
             <h3>My Skills</h3>
@@ -93,18 +98,61 @@
     </section>
 
     <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+        
+        <div class="project-card-container">
             <div class="project-card">
-                <h3>Smart Biomass Monitoring System</h3>
-                <p>An embedded hardware-software system designed to monitor a copra dryer. It tracks dual-zone temperatures (combustion and drying) and calculates real-time air quality metrics (CO2, SO2, NOx).</p>
-                <br>
-                <p><strong>Key Features:</strong> Custom C++ signal filtering algorithm for noisy analog inputs, dynamic color-coded TFT user interface, and sensor calibration.</p>
-                <br>
-                <p><strong>Tech Stack:</strong> C++, Microcontrollers, SPI Communication, MAX6675 & MQ135 Sensors, LovyanGFX.</p>
+                
+                <div class="project-video-section">
+                    <div class="project-video-wrapper">
+                        <div class="video-overlay" id="demoOverlay" onclick="startDemo()">
+                            <div class="play-btn-large">
+                                ▶ Play Demo Video
+                            </div>
+                        </div>
+
+                        <video id="biomassVideo" controls width="100%">
+                            <source src="Videos/bimomass_monitoring.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    
+                </div>
+
+                <div class="project-info-section">
+                    <h3 class="project-title">Smart Biomass Monitoring System</h3>
+                    
+                    <p class="project-description">
+                        Developed the core software architecture and firmware for an embedded monitoring system used in thermal agricultural processing. The program processes real-time sensor data from dual-zone temperature (combustion and dryer) and computes air quality thresholds (CO2, SO2, and NOx) to output instantly to a dynamic local display.
+                    </p>
+
+                    <div class="features-block">
+                        <h4>Key Features:</h4>
+                        <ul class="features-list">
+                            <li><span class="checkmark">✓</span> Custom C++ signal filtering algorithm</li>
+                            <li><span class="checkmark">✓</span> Dynamic color-coded TFT UI</li>
+                            <li><span class="checkmark">✓</span> Sensor calibration</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-stack-block">
+                        <h4>Tech Stack:</h4>
+                        <div class="tech-badges">
+                            <span class="tech-badge">⚙️ C++</span>
+                            <span class="tech-badge">🎛️ Microcontrollers</span>
+                            <span class="tech-badge">🔌 SPI</span>
+                            <span class="tech-badge">📡 MAX6675 & MQ135</span>
+                            <span class="tech-badge">🎨 LovyanGFX</span>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
 
     <section id="contact">
         <h2>Get In Touch</h2>
@@ -126,30 +174,34 @@
                     <a href="https://www.instagram.com/johnnncxx_4" target="_blank" class="social-icon instagram" title="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
+                    <a href="https://www.linkedin.com/in/john-calayugan-273478369/" target="_blank" class="social-icon linkedin" title="LinkIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
                 </div>
                 <br>
                 <p>I am currently available for work and full-time opportunities. Feel free to reach out using the form or via email.</p>
             </div>
 
-            <div class="contact-form">
-                <h3>Send a Message</h3>
-                <form action="https://formspree.io/f/xzdqokrl" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                    </div>
-                    <input type="hidden" name="_subject" value="New Portfolio Message!">
-                    <div class="form-group">
-                        <button type="submit">Send Message</button>
-                    </div>
-                </form>
-            </div>
-
+            <div class="contact-form-container">
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form action="https://formspree.io/f/xzdqokrl" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New Portfolio Message!">
+                        <div class="form-group">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>      
         </div>
     </section>
 
